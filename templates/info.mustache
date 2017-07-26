@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Info</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <img src={{avatar}} class='avatar'>
+    <div id='header'>
+      <h1>{{name}}</h1>
+      <p>{{#address.city}}
+        {{address.city}},
+        {{/address.city}}
+        {{address.country}} |
+        {{#job}}
+        {{job}},
+        {{/job}}
+        {{^job}}
+        <span>Available for hire</span>
+        {{/job}}
+        {{company}}</p>
+    </div>
+    <div id='education'>
+      {{#education}}
+      <p><strong>Education</strong>     {{university}}</p>
+      {{/education}}
+      <p><strong>Skills</strong>        {{skills}}</p>
+    </div>
+  </body>
+</html>
