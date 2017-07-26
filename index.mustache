@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Robot Directory</title>
+    <link rel="stylesheet" href="screen.css">
+  </head>
+  <body>
+    <h1>Robot Directory</h1>
+    <ul>
+      {{#users}}
+    <li>
+      <img src={{avatar}}>
+      <a href="/info/{{username}}">{{name}}</a>
+      {{#job}}
+      <p>{{job}},
+      {{/job}}
+      {{^job}}
+      <span>Available for hire</span>
+      {{/job}}
+      {{company}}</p>
+      {{/users}}
+    </li>
+
+  </body>
+</html>
